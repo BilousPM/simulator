@@ -6,12 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link rel="stylesheet" href="./css/styles.css" />
   <body>
-    <ul class="btn">
-      <li><a href=",fnj"></a></li>
-      <li><a href=",fnj"></a></li>
-      <li><a href=",fnj"></a></li>
-      <li><a href=",fnj"></a></li>
-    </ul>
+    <form class="js-speaker-form">
+      <label for="name">name</label>
+      <input type="text" name="user-name" id="name" />
+
+      <label for="tel">телефон</label>
+      <input type="tel" name="tel" id="tel" />
+
+      <label for="mail">почта</label>
+      <input type="email" name="mail" id="mail" autofocus />
+
+      <div role="groop checkbox">
+        <input type="checkbox" name="topp" value="html" id="html" />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="topp" value="css" id="css" />
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topp" value="js" id="js" />
+        <label for="js">JS</label>
+      </div>
+
+      <div role="groop">
+        <label for="junior">Junior</label>
+        <input type="radio" name="experianse" value="junior" id="junior" />
+
+        <label for="midl">Midl</label
+        ><input type="radio" name="experianse" value="midl" id="midl" />
+
+        <label for="senior">Senior</label>
+        <input type="radio" name="experianse" value="senior" id="senior" />
+      </div>
+
+      <label for="data">Дата виступу</label>
+      <input
+        type="datetime-local"
+        name="data"
+        id="data"
+        min="2021-01-01T12:00"
+        max="2023-01-01T12:00"
+      />
+
+      <br />
+
+      <label for="pdf">pd-документи</label>
+      <input type="file" name="pdf" id="pdf" />
+      <br />
+
+      <label for="coment">коментарі</label>
+      <textarea name="coment" id="coment" cols="30" rows="10"></textarea>
+      <br />
+
+      <label for="ready">погоджуюсь на все</label>
+      <input type="checkbox" name="ready" id="ready" />
+
+      <br />
+
+      <button type="submit">зареєструватись</button>
+    </form>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
