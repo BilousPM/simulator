@@ -5,15 +5,15 @@
 До x1 після x2*/
 
 
-const x1 = 10;
-const x2 = 30;
-const number = 50;
+// const x1 = 10;
+// const x2 = 30;
+// const number = 50;
 
-console.log(`Число ${number} попадає в відрізок до ${x1} ?`, number < x1);
+// console.log(`Число ${number} попадає в відрізок до ${x1} ?`, number < x1);
 
-console.log(`Число ${number} попадає в відрізок після ${x2} ?`, number > x2);
-console.log(`Число ${number} попадає в відрізок від ${x1} до ${x2} ?`, number > x1 && number < x2);
-console.log(`Число ${number} попадає в відрізок до ${x1} чи після ${x2} ?`, number < x1 || number > x2);
+// console.log(`Число ${number} попадає в відрізок після ${x2} ?`, number > x2);
+// console.log(`Число ${number} попадає в відрізок від ${x1} до ${x2} ?`, number > x1 && number < x2);
+// console.log(`Число ${number} попадає в відрізок до ${x1} чи після ${x2} ?`, number < x1 || number > x2);
 
 
 /* напиши скрипт який перевіряє можливість відкрити чат з користувачем
@@ -23,12 +23,12 @@ console.log(`Число ${number} попадає в відрізок до ${x1} 
  -без режиму не турбувати
  */
 
-const isFriend = true;
-const isOnline = true;
-const isDnd = false;
+// const isFriend = true;
+// const isOnline = true;
+// const isDnd = false;
 
-const canOpenChat = isFriend && isOnline && !isDnd;
-console.log('Можливо відкрити чат ?', canOpenChat);
+// const canOpenChat = isFriend && isOnline && !isDnd;
+// console.log('Можливо відкрити чат ?', canOpenChat);
 
 /* Скрипт перевірки підписки користувача при доступі до контенту
 -- Є три типи підписки: free, pro, vip
@@ -36,7 +36,80 @@ console.log('Можливо відкрити чат ?', canOpenChat);
 */
 /* Якщо користувач vip чи pro, то доступ дозволенно,*/
 
-const sub = 'pro';
-const canAccessContent = sub === 'pro' || sub === 'vip';
+// const sub = 'pro';
+// const canAccessContent = sub === 'pro' || sub === 'vip';
 
-console.log('Доступ дозволенно', canAccessContent);
+// console.log('Доступ дозволенно', canAccessContent);
+
+
+
+/* напиши скрипт обробки покупки в магазині ---- 2 й відос (1:04)
+сумма покупки зберігається в змінній payment
+
+Перед перевіркою вивисти повідомлення
+"Загальна вартість заказа {число} кредитів. Перевіряєм кілкісьть доступних засобів на рахунку"
+
+Якщо сума покупки не перевищує баланс
+-вирахувати із балансу сумму покупки
+-вивести повідомлкннь "На рахунку залишилось {число} кредитів"
+-якщо сумма покупки більша за баланс:
+-Вивести "На рахунку недостатньо коштів !"
+-в кінці вивести "Операція здійсненна"
+*/
+
+// let balanse = 10000;
+// const payment = 2000;
+
+// console.log(`Загальна вартість заказа ${payment} кредитів. Перевіряєм кілкісьть доступних засобів на рахунку`);
+
+// if (payment <= balanse) {
+//     balanse -= payment;
+//     console.log(`На рахунку залишилось ${balanse} кредитів`);
+// } else{
+//     console.log("На рахунку недостатньо коштів !");
+// }
+
+// console.log("Операція здійсненна");
+
+
+
+// --------------------------------- 2-й відос (1:16) -----------------------------
+/* Напиши скрипт підрахунку покупки зі знижкою в залежності від потраченної сумми за весь час (партнерська программа).
+ -загальна сумма витраченного зберіг. в змінній totalSpent
+ -сумма поточного платежу - payment
+ -Скидка - discount
+
+ -від 100 до 1000 - бронза, знижка 2%
+ -від 1000 до 5000 - срібло, знижка 5%
+ -більше 5000 - золото, знижка 10%
+ -менше 100 - не партнер, знижка 0%
+
+ -В результаті вивести повідомлення
+  `Оформлюєм замовлення на сумму ${} зі знтжкою ${}`;
+*/
+let totalSpent = prompt("кідькість потраченних коштів");
+totalSpent = Number(totalSpent);
+
+// let totalSpent = 2000;
+let payment = 500;
+let discount = 0;
+
+if (totalSpent < 100) {
+  console.log(`не партнер, знижка 0%`)
+} else if (totalSpent >= 100 && totalSpent < 1000) {
+  console.log("бронза, знижка 2%");
+  discount = 0.02;
+} else if (totalSpent >= 1000 && totalSpent < 5000) {
+  console.log(`срібло, знижка 5%`);
+  discount = 0.05;
+} else {
+  console.log(`золото, знижка 10%`);
+  discount = 0.1;
+}
+
+payment -= payment * discount;
+
+console.log(`Оформлюєм замовлення на сумму ${payment} зі знтжкою ${discount * 100}%`);
+ 
+totalSpent += payment;
+console.log(`загальна сумма потраченна в магазині ${totalSpent}`)

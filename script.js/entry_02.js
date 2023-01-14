@@ -17,3 +17,7 @@ quantity = Number(quantity);
 console.log(quantity);
 console.log(typeof quantity);
 // --------------------------------------------------------------------
+
+
+
+// Робота з інтерфейсом ------------- відос 2 --- 1.44 хв
