@@ -87,29 +87,216 @@
  -В результаті вивести повідомлення
   `Оформлюєм замовлення на сумму ${} зі знтжкою ${}`;
 */
-let totalSpent = prompt("кідькість потраченних коштів");
-totalSpent = Number(totalSpent);
+// let totalSpent = prompt("кідькість потраченних коштів");
+// totalSpent = Number(totalSpent);
 
-// let totalSpent = 2000;
-let payment = 500;
-let discount = 0;
+// // let totalSpent = 2000;
+// let payment = 500;
+// let discount = 0;
 
-if (totalSpent < 100) {
-  console.log(`не партнер, знижка 0%`)
-} else if (totalSpent >= 100 && totalSpent < 1000) {
-  console.log("бронза, знижка 2%");
-  discount = 0.02;
-} else if (totalSpent >= 1000 && totalSpent < 5000) {
-  console.log(`срібло, знижка 5%`);
-  discount = 0.05;
-} else {
-  console.log(`золото, знижка 10%`);
-  discount = 0.1;
-}
+// if (totalSpent < 100) {
+//   console.log(`не партнер, знижка 0%`)
+// } else if (totalSpent >= 100 && totalSpent < 1000) {
+//   console.log("бронза, знижка 2%");
+//   discount = 0.02;
+// } else if (totalSpent >= 1000 && totalSpent < 5000) {
+//   console.log(`срібло, знижка 5%`);
+//   discount = 0.05;
+// } else {
+//   console.log(`золото, знижка 10%`);
+//   discount = 0.1;
+// }
 
-payment -= payment * discount;
+// payment -= payment * discount;
 
-console.log(`Оформлюєм замовлення на сумму ${payment} зі знтжкою ${discount * 100}%`);
+// console.log(`Оформлюєм замовлення на сумму ${payment} зі знтжкою ${discount * 100}%`);
  
-totalSpent += payment;
-console.log(`загальна сумма потраченна в магазині ${totalSpent}`)
+// totalSpent += payment;
+// console.log(`загальна сумма потраченна в магазині ${totalSpent}`)
+
+// ----------------------- Масиви .... 3-й відос 46 хв
+
+// порахувати загальну сумму покупки в корзині...
+
+// const cart = [54, 28, 105, 78, 92, 17, 120];
+// 2-зробити змінну total до циклу
+// let total = 0;
+// 1- перебрати масив
+// for (let i = 0; i < cart.length; i += 1) {
+  // console.log(cart[i]);
+// 3-кожен елемент приплюсувати до total
+//   total += cart[i];
+// }
+// console.log('total', total);
+
+// Таж сама задачка, тільки з FOR OF
+// for (const value of cart) {
+//   total += value
+// }
+// console.log('total', total);
+
+// Зразок, коли перевизначається змінна
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   cart[i] = Mat.round(cart[i] * 1.1);
+// }
+// console.log(cart);
+
+// Через FOR OF немає доступу до "i"
+
+
+
+// ------------------------------------------------------------------
+// Напиши скрипт, який підраховує сумму всіх парних чисел в масиві...
+
+// const numbers = [5, 85, 54, 66, 74, 25, 46, 12, 5];
+// let total = 0;
+// змінна тотал
+// 1- перебрати масив
+// for (let i = 0; i < numbers.length; i += 1) {
+  // console.log(numbers[i]);
+// 2- на кожній ітераціївиділити всі парні числа
+  // if (numbers[i] % 2 === 0) {
+    // console.log('Парне число...');
+    // 3-якщо парні.. сумма парних чисел total
+    // total += numbers[i];
+    
+  // }
+// }
+
+// console.log('Сумма...', total);
+
+
+// ---варіант з фор оф....
+//   for (const number of numbers) {
+//     if (number % 2 === 0) {
+//       console.log('Парне число...');
+//       total += number;
+//     }
+// }
+
+
+// ------ ще один варік (від заперечення)
+//   for (const number of numbers) {
+//     if (number % 2 !== 0) {
+//       console.log('цю ітерацію пропускаєм', number);
+//       continue;
+//     }
+    
+//     console.log('Парне число...');
+//       total += number;
+// }
+// console.log('Сумма...', total);
+  
+
+
+// --------------------------------------------------- 3-й відос 1.13хв
+// Напиши скрипт пошуку логіна
+// Якщо логін відсутній, то виводим повідомлення `Користувавч з логіном ${user} відсутній`;
+// Якщо логін знайденно, то виводим `Привіт ${user}`;
+
+// const logins = ['nijnjldl', 'jfngtni', 'ppoliscute', 'jjgwkk604', 'jjfjj36egn'];
+// const loginToFind = 'ppoliscute';
+// let message = `Користувавч з логіном ${loginToFind} відсутній`;
+
+// ----через for
+
+
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+
+//   console.log('login ', login);
+//   console.log(`${login} === ${loginToFind}`, login === loginToFind );
+
+
+//   if (login === loginToFind) {
+//     message = `Привіт ${loginToFind}`;
+//     break;
+//   }
+// }
+
+// // ----чкркз for of ---- логіка break
+
+// for (const login of logins) {
+  
+//   if (login === loginToFind) {
+//     message = `Привіт ${loginToFind}`;
+//     break;
+//   }
+// }
+
+// // ----метод includes(); з тернарним оператором.
+
+// const message = logins.includes(loginToFind) ? `Привіт ${loginToFind}` : `Користувавч з логіном ${loginToFind} відсутній`
+
+// console.log(message);
+
+// -------------------------------------------- 3-й відос 1.32 хв
+
+// напиши скрипт пошуку свмого маленького числа в масиві, при умові, що числа унікальні, і не повторюються...
+
+// const numbers = [32, 54, 23, 76, 12, 34,];
+// let smoleNumber = numbers[0];
+
+// console.log(smoleNumber);
+
+// for (const number of numbers) {
+//   if (number < smoleNumber) {
+//     smoleNumber = number;
+//   }
+// }
+
+// console.log(smoleNumber);
+
+// ----------------------------------------------3-й відос 1.41 хв
+
+// -Напиши скрипт, який обєднує всі єлементи масива в одне рядкове значення.
+// -Елементів може буди довільна кількість. Елементів
+// -нехай елементи в рядку будуть розділенні комою
+// -потім через join()
+
+// const friends = ['Mango', 'Poli', 'Kiwi', 'Ajax'];
+// // let string = '';
+
+// for(const frend of friends) {
+//   string += frend + ',';
+// }
+// string = string.slice(0, string.length - 1);
+
+// console.log(string)
+// повинно вийти 'Mango,Poli,Kiwi,Ajax'
+
+// ------------------АБО----------------
+// const string = friends.join(',');
+// console.log(string);
+
+// ---------------------------------------------------3-й відос 1.49 хв
+ 
+// Напиши скрипт який замінює регістер кожного символу на протилежний
+
+const string = "JavaScript";
+const leters = string.split('');
+let invertedString = "";
+// console.log(leters);
+
+for (const leter of leters) {
+  console.log(leter);
+
+//   if (leter === leter.toLowerCase()) {
+//     console.log('Ця буква в нижньому регістрі', leter);
+
+//     invertedString += leter.toUpperCase();
+//   } else {
+//     console.log('ця буква в верхньому регістрі', leter);
+//     invertedString += leter.toLowerCase();
+//   }
+
+// ---Інший варіант....
+invertedString += leter === leter.toLowerCase() ? leter.toUpperCase() : leter.toLowerCase(); 
+}
+  
+console.log(invertedString);
+
+// -----------------------------------------закінчив відос 3 на 2.00 хв
+
+
