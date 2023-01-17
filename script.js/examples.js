@@ -274,13 +274,13 @@
  
 // Напиши скрипт який замінює регістер кожного символу на протилежний
 
-const string = "JavaScript";
-const leters = string.split('');
-let invertedString = "";
-// console.log(leters);
+// const string = "JavaScript";
+// const leters = string.split('');
+// let invertedString = "";
+// // console.log(leters);
 
-for (const leter of leters) {
-  console.log(leter);
+// for (const leter of leters) {
+//   console.log(leter);
 
 //   if (leter === leter.toLowerCase()) {
 //     console.log('Ця буква в нижньому регістрі', leter);
@@ -292,11 +292,68 @@ for (const leter of leters) {
 //   }
 
 // ---Інший варіант....
-invertedString += leter === leter.toLowerCase() ? leter.toUpperCase() : leter.toLowerCase(); 
-}
+// invertedString += leter === leter.toLowerCase() ? leter.toUpperCase() : leter.toLowerCase(); 
+// }
   
-console.log(invertedString);
+// console.log(invertedString);
 
-// -----------------------------------------закінчив відос 3 на 2.00 хв
 
+
+// -----------------------------------------'SLUG' відос 3 на 2.00 хв
+// робим Slug в URL із назви статї. Заголовок складається тільки з букв і пробілів.
+
+// -нормалізуєм рядок
+// -розбиваєм по словам
+// -зшиваєм в строку з розділювачем
+
+const title = 'Top 10 benefits of React framework';
+
+const normalizedTitle = title.toLowerCase();
+console.log(normalizedTitle);
+
+const words = normalizedTitle.split(' ');
+console.log(words);
+
+const slug = words.join('-');
+console.log(slug);
+
+// ---- Інший метод----
+// метод чейнінг, або ланцюжки викликів методу...     --- 3-й відос 2.06 хв
+
+const slug1 = title.toLowerCase().split(' ').join('-');
+
+console.log(slug1);
+
+
+// -------------------------------------Метод .concat (зшивання двох і бвльше масивів)
+// Напши скрипт який рахує суму елементів двух масивів..
+const array1 = [5, 12, 15, 20];
+const array2 = [10, 20, 30];
+let total = 0;
+
+const numbers = array1.concat(array2);
+
+for (const number of numbers) {
+  total += number;
+}
+console.log(total);
+
+
+// ---------------- метод splice();  3-й відос 2.17хв
+// робота з колекцією карточок в trello
+// метод splice();
+// -видалити
+// -добавити
+// -обновити
+
+const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
+
+// ----Видалення елементів по індексу...
+
+const cardToRemove = "card-3";
+const index = cards.indexOf(cardToRemove);
+console.log(index);
+
+cards.splice(index, 1);
+console.log(cards);
 
