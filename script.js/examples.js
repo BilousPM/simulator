@@ -292,7 +292,7 @@
 //   }
 
 // ---Інший варіант....
-// invertedString += leter === leter.toLowerCase() ? leter.toUpperCase() : leter.toLowerCase(); 
+// invertedString += leter === leter.toLowerCase() ? leter.toUpperCase() : leter.toLowerCase();
 // }
   
 // console.log(invertedString);
@@ -306,54 +306,216 @@
 // -розбиваєм по словам
 // -зшиваєм в строку з розділювачем
 
-const title = 'Top 10 benefits of React framework';
+// const title = 'Top 10 benefits of React framework';
 
-const normalizedTitle = title.toLowerCase();
-console.log(normalizedTitle);
+// const normalizedTitle = title.toLowerCase();
+// console.log(normalizedTitle);
 
-const words = normalizedTitle.split(' ');
-console.log(words);
+// const words = normalizedTitle.split(' ');
+// console.log(words);
 
-const slug = words.join('-');
-console.log(slug);
+// const slug = words.join('-');
+// console.log(slug);
 
 // ---- Інший метод----
 // метод чейнінг, або ланцюжки викликів методу...     --- 3-й відос 2.06 хв
 
-const slug1 = title.toLowerCase().split(' ').join('-');
+// const slug1 = title.toLowerCase().split(' ').join('-');
 
-console.log(slug1);
+// console.log(slug1);
 
 
 // -------------------------------------Метод .concat (зшивання двох і бвльше масивів)
-// Напши скрипт який рахує суму елементів двух масивів..
-const array1 = [5, 12, 15, 20];
-const array2 = [10, 20, 30];
-let total = 0;
+// // Напши скрипт який рахує суму елементів двух масивів..
+// const array1 = [5, 12, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
 
-const numbers = array1.concat(array2);
+// const numbers = array1.concat(array2);
 
-for (const number of numbers) {
-  total += number;
-}
-console.log(total);
+// for (const number of numbers) {
+//   total += number;
+// }
+// console.log(total);
 
 
-// ---------------- метод splice();  3-й відос 2.17хв
+// ---------------------------------- метод splice();  3-й відос 2.17хв
 // робота з колекцією карточок в trello
 // метод splice();
 // -видалити
 // -добавити
 // -обновити
 
-const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
+// const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
 
-// ----Видалення елементів по індексу...
+// ----Видалення елементів (по індексу)...
 
-const cardToRemove = "card-3";
-const index = cards.indexOf(cardToRemove);
-console.log(index);
+// const cardToRemove = "card-3";
+// const index = cards.indexOf(cardToRemove);
+// console.log(index);
 
-cards.splice(index, 1);
-console.log(cards);
+// cards.splice(index, 1);
+// console.log(cards);
 
+// -----Додавання (по індексу)....
+
+// const cardToInsert = 'card-6';
+// const index = 3;
+// cards.splice(2, 0, cardToInsert);
+
+// console.log(cards);
+
+// ---- Обновлення (по індексу).....
+
+// const cardToUpdate = 'card - 4'
+
+// cards.splice(3, 1, cardToUpdate);
+
+// console.table(cards);
+
+// ПРАКТИКА  21.01.2023
+
+
+// Напишіть через світч калькулятор
+// Потрібно ввести перше число в prompt, потім математичну операцію
+// Тоді ввести наступне число
+
+// const number1 = Number (prompt("Enter first number"));
+// const number2 = Number (prompt("Enter second number"));
+// const operation = prompt("Enter operation");
+
+// switch (operation) {
+//   case "+":
+//     console.log(number1 + number2);
+//     break;
+  
+//   case "-":
+//     console.log(number1 - number2);
+//     break;
+  
+//   case "/":
+//     console.log(number1 / number2);
+//     break;
+  
+//   case "*":
+//     console.log(number1 * number2);
+//     break;
+  
+//   default:
+// console.log( NaN )
+// };
+
+//Напишіть цикл, який виводить у консоль
+//1. числа від max до min за спаданням
+//2. Виведіть у консоль усіх парні числа від min до max
+//3. За допомогою циклу for додайте всі парні числа від min до max
+//const max = 90;
+//const min = 33;
+
+// Напишіть код, який запитуватиме
+// логін за допомогою prompt і буде виводити результат
+// в консоль браузера
+
+// Якщо користувач вводить "Admin",
+// то prompt запитує пароль.
+// Якщо нічого не ввели або натиснута клавіша Esc
+// вивести рядок "Cancel"
+// Інакше вивести рядок "I don't know you"
+
+//Пароль перевіряти так:
+// Якщо введено пароль "I am admin",
+// то вивести рядок "Hello!"
+// інакше виводити рядок "Wrong password!"
+//
+// Напишіть через світч пошук автора мови програмування
+// Пишемо назву мови у шаблонному рядку отримує відповідь: мова та автор
+// PHP Расмус Лердорф
+// C# група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота
+// Swift Кріс Латтнер
+// JS Брендан Ейх
+// Java Джеймс Гослінг
+// Python Гвідо ван Россум
+//
+// Напишіть через світч калькулятор
+// Потрібно ввести перше число в prompt, потім математичну операцію
+// Тоді ввести наступне число
+
+// При завантаженні сторінки користувачеві пропонується
+// в prompt ввести число. Після введення число додається до значення
+// змінної total.
+// Операція введення числа продовжується доти,
+// поки користувач не натисне кнопку Cancel в prompt.
+
+// Після того як користувач припинив введення, натиснувши на
+// кнопку Cancel, показати console.log з рядком "Загальна сума введених чисел дорівнює [число]."
+
+// Зробити перевірку, що користувач ввів саме число,
+// а не довільний набір символів.
+// (
+// while
+// do {
+  
+//   } while (condition);
+
+//   let number = prompt("Enter number");
+// let total = 0;
+
+// while (number !== null) {
+//   if (!isNaN(Number(number))) {
+//     total += Number(number);
+//   }
+
+//   // total += Number(number);
+//   number = prompt("Enter number");
+// }
+
+// console.log(total);
+// )
+
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо користувач ввів інше число - попросити
+// ввести ще раз і так далі.
+// Цикл повинен запитувати число, поки користувач не
+// введе число більше 100, або натисне кнопку
+// Скасування в prompt
+
+
+
+// За кожен місяць податкова нараховує на ЗП розробника 5% від суми.
+// Напишіть консольну функцію, на яку користувач вводить суму зп
+// і кількість місяців з допомогою prompt() не забуваємо, що промпт повертає рядок.
+// А податкова обчислює кінцеву суму зп без податків,
+// Суму податків всього і чистий дохід розробника за кожен місяць.
+// Для обчислення суми з урахуванням відсотків використовуйте цикл for.
+
+// const salary = 1000;
+// const tax = 0.05;
+// let fullSalary = 0;
+// let fullTax = 0;
+// const period = 12;
+
+// for (let i = 0; i < period; i += 1) {
+//   fullSalary += salary - salary * tax;
+//   fullTax += salary - salary * (1 - tax);
+// }
+// console.log(fullSalary);
+// console.log(fullTax);
+
+
+
+
+// Напишіть програму для перевірки чи є число простим чи ні
+// const number = prompt ('Веедите число');
+// let isPrime = true;
+
+// for ( let i=2; i < number; i+=1) {
+//     if ( number%i === 0) {
+//         isPrime = false;
+//         break;
+//     }
+
+// }
+
+// console.log (number);
+// console.log (isPrime);
