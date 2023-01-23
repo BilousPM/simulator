@@ -81,12 +81,12 @@ console.log(totalFeedback);
 
 // -------------------  Робота з масивом обєктів  --------------------
 
-const friends = [
-    { name: "Mango", online: false },
-    { name: "Kiwi", online: true },
-    { name: "Poly", online: true },
-    { name: "Ajax", online: false },
-];
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ];
 
 console.table(friends);
 
@@ -100,44 +100,92 @@ console.table(friends);
 
 // задачка : Шукаєм користувача по імені....
 
-const findFriendByName = function (allFriends, friendName) {
-    for (const friend of friends) {
-        // console.log(friend);
-        // console.log(friend.name);
+// const findFriendByName = function (allFriends, friendName) {
+//     for (const friend of friends) {
+//         // console.log(friend);
+//         // console.log(friend.name);
 
-        if (friend.name === friendName) {
-            return "Helo my diar Friend :)";
-        }
-    };
+//         if (friend.name === friendName) {
+//             return "Helo my diar Friend :)";
+//         }
+//     };
 
-    return "Unfortunately :(";
-};
+//     return "Unfortunately :(";
+// };
 
 
 // console.log(findFriendByName(friends, 'Poly'));
 // console.log(findFriendByName(friends, 'Chelsy'));
 
 
-const getAllNames = function (allFriends) { };
 
 //задачка: із нашого масиву друзів отримати всі імена друзів... Відос 5; 1.25 хв.
 
+// const getAllNames = function (allFriends) {
+//     const onlyNames = [];
 
+//     for (const friend of allFriends) {
+//         console.log(friend.name);
 
-
-
-// const apartment = {
-//   descr: "Spacious apartment in the city center",
-//   rating: 4,
-//   price: 2153,
+//         onlyNames.push(friend.name)
+//     }
+//     console.log(onlyNames);
+//     return onlyNames;
 // };
-// const keys = [];
-// const values = [];
-// // Change code below this line
-// for (let key in apartment) {
-//   keys.push(key);
-//   values.push(apartment[key]);
-// }
 
-// console.log(keys)
-// console.log(values)
+// console.log(getAllNames(friends));
+
+
+// отримуємо імена друзів, які онлайн...
+
+// const getOnlineFriend = function (allFriends) {
+//     const onlineFriends = [];
+
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         console.log(friend.online);
+//         if (friend.online) {
+//             onlineFriends.push(friend);
+//         }
+//     }
+//     // console.log(onlineFriends);
+//     return onlineFriends;
+// };
+
+// console.log(getOnlineFriend(friends));
+
+
+
+/* Робота з колекцією товарів в корзині відос 5  2.00 хв.
+egtItems()
+add(prodact)
+remove(productName)
+countTotalPrice()
+increaseQuantity(prodactName) {}
+decreaseQuantity(prodactName) {}
+
+{ name: 'apple', price: 50 }
+{ name: 'grape', price: 70 }
+{ name: 'lemon', price: 60 }
+{ name: 'strovbery', price: 110 }
+*/
+
+const cart = {
+    items: [],
+    getItems() { },
+    add(product) { },
+    remove(prodactName) { },
+    clear() { },
+    countTotalPrice() { },
+    increaseQuantity(prodactName) { },
+    decreaseQuantity(prodactName) { },
+};
+
+
+
+
+
+
+
+
+
