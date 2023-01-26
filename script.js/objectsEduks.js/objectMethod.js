@@ -16,7 +16,7 @@
 //     },
 
 //     changeName(newName) {
-//         console.log("this в середині :", this); 
+//         console.log("this в середині :", this);
 //         this.name = newName;
 //     },
 
@@ -88,15 +88,15 @@ console.log(totalFeedback);
 //     { name: "Ajax", online: false },
 // ];
 
-console.table(friends);
+// // console.table(friends);
 
-/* for (const friend of friends) {
-     console.log(friend);
+// for (const friend of friends) {
+//      console.log(friend);
 
-     friend.newProp = 555;
- }
+//      friend.newProp = 555;
+//  }
 
- console.table(friends); */
+//  console.table(friends);
 
 // задачка : Шукаєм користувача по імені....
 
@@ -156,7 +156,7 @@ console.table(friends);
 
 
 
-/* Робота з колекцією товарів в корзині відос 5  2.00 хв.
+/* Робота з колекцією товарів в корзині відос 5  2.00 хв. ПРОДОВЖЕННЯ ВИРІШЕННЯ ЗАДАЧІ 6 відос 1.30 хв.
 egtItems()
 add(prodact)
 remove(productName)
@@ -172,20 +172,110 @@ decreaseQuantity(prodactName) {}
 
 const cart = {
     items: [],
-    getItems() { },
-    add(product) { },
-    remove(prodactName) { },
+    // повертає масив items
+    getItems() {
+        return this.items;
+    },
+    // додавання продукту до items
+    add(product) { 
+        this.items.push(product);
+    },
+    // видалення товару
+    remove(prodactName) { 
+        const { items } = this;
+
+        for (let i = 0; i < items.length; i += 1) {
+            const {name} = items[i];
+            if (prodactName === name) {
+                console.log("знайшл такий продукт", prodactName)
+
+                console.log(i);
+                items.splice(i, 1)
+            }
+        }
+    },
     clear() { },
     countTotalPrice() { },
     increaseQuantity(prodactName) { },
     decreaseQuantity(prodactName) { },
 };
+console.log(cart.getItems());
+
+cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'grape', price: 70 });
+cart.add({ name: 'lemon', price: 60 });
+cart.add({ name: 'strovbery', price: 110 });
+
+console.table(cart.getItems());
+
+cart.remove('lemon');
+
+console.log(cart.getItems());
+// -------------------------------------------------------------------
+
+// const book = {
+//     title: "The Last Kingdom",
+//     author: "B. Covenwell",
+//     rating: 8.38,
+// }
+
+// const keys = Object.keys(book);
+
+// console.log(keys);
+
+// -=-==-=-=--=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-==-=-=-==-
 
 
 
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+
+//     const array = [];
+    
+//     for (const prodact of products) {
+
+//         const item = Object.keys(prodact);
+      
+
+//         if (propName !== item) {
+// console.log(array);
+//         }
+        
+//     }
+   
+// }
+    
+  
+//  console.log(array);
+// // return array;
+//   // Change code above this line
+// }
+
+
+// getAllPropValues();
+// getAllPropValues("name");
+// getAllPropValues("quantity");
+// getAllPropValues("price");
+// getAllPropValues("category");
 
 
 
+// const array = Object.values(prodact[propName])
 
 
+//         // if (array.push(prodact[propName])) {
 
+//         // }
+//         const array = Object.values(prodact);
+
+// const products = { name: "Grip", price: 1200, quantity: 9 };
+
+// let item = Object.values('name');
+ 
+// console.log(item);

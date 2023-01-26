@@ -48,18 +48,18 @@
 
 
 // --------------------- Ітерація масиву --------- "FOR"
-const frends = ['Mango', 'Kiwi', 'Poli', 'Ajax'];
-// console.log(frends);
-// const lastIndex = frends.length - 1;
+// const frends = ['Mango', 'Kiwi', 'Poli', 'Ajax'];
+// // console.log(frends);
+// // const lastIndex = frends.length - 1;
 
-// for (let i = 0; i <= lastIndex; i += 1) {
-//     console.log(i);
-//     console.log(frends[i]);
-// }
+// // for (let i = 0; i <= lastIndex; i += 1) {
+// //     console.log(i);
+// //     console.log(frends[i]);
+// // }
 
 // --------------------- Ітерація масиву --------- "FOR  OF"
 // використовується, коли не потрібен індекс елемента, та не потріно змінювати елемент масиву.
 
-for (const friend of frends) {
-  console.log(friend)  
-}
+// for (const friend of frends) {
+//   console.log(friend)  
+// }
