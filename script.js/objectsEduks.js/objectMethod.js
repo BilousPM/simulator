@@ -172,45 +172,102 @@ decreaseQuantity(prodactName) {}
 
 const cart = {
     items: [],
+
+
     // повертає масив items
     getItems() {
         return this.items;
     },
+
+
     // додавання продукту до items
     add(product) { 
-        this.items.push(product);
+
+        for (let item of this.items) {
+            if (item.name === product.name) {
+                item.quantity += 1;
+                return;
+           } 
+        }
+        const newProduct = {
+            ...product,
+            quantity: 1,
+        }
+
+        this.items.push(newProduct);
     },
+
     // видалення товару
     remove(prodactName) { 
         const { items } = this;
 
         for (let i = 0; i < items.length; i += 1) {
-            const {name} = items[i];
+            const { name } = items[i];
+            
             if (prodactName === name) {
                 console.log("знайшл такий продукт", prodactName)
+                console.log('iндекс найденного елемента:', i);
 
-                console.log(i);
                 items.splice(i, 1)
             }
         }
     },
-    clear() { },
-    countTotalPrice() { },
-    increaseQuantity(prodactName) { },
+
+// повне очишчення масиву
+    clear() {
+        this.items = [];
+    },
+    
+// рахує загальну сумму масиву
+    countTotalPrice() {
+        const { items } = this;
+        let total = 0;
+
+        // for (let item of items) {
+        //     total += item.price;
+        // }
+        // варіант з деструктуризацією
+        for (let {price, quantity} of items) {
+            total += price * quantity;
+        }
+
+        return total;
+    },
+
+
+    increaseQuantity(prodactName) {
+for(let )
+    },
+    
+
     decreaseQuantity(prodactName) { },
 };
 console.log(cart.getItems());
 
 cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'apple', price: 50 });
+cart.add({ name: 'grape', price: 70 });
 cart.add({ name: 'grape', price: 70 });
 cart.add({ name: 'lemon', price: 60 });
+cart.add({ name: 'strovbery', price: 110 });
+cart.add({ name: 'strovbery', price: 110 });
 cart.add({ name: 'strovbery', price: 110 });
 
 console.table(cart.getItems());
 
-cart.remove('lemon');
+// cart.remove('lemon');
+// console.log(cart.remove('lemon'));
 
-console.log(cart.getItems());
+// cart.countTotalPrice();
+console.log(cart.countTotalPrice());
+
+// cart.clear()
+// console.log(cart.clear());
+
+
+
+
 // -------------------------------------------------------------------
 
 // const book = {
@@ -279,3 +336,6 @@ console.log(cart.getItems());
 // let item = Object.values('name');
  
 // console.log(item);
+
+
+
