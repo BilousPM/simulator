@@ -13,10 +13,13 @@ const playlist = {
 playlist.qwe = 5;
 
 const propertyName = 'tracks';
-
 console.log(playlist);
-console.log(playlist.tracks);
-console.log(playlist.raiting);
+// console.log(playlist.tracks);
+// console.log(playlist.raiting);
+// деструктуруємо....
+const { name, tracks, raiting, trackCount, qwe} = playlist
+console.log(tracks);
+console.log(raiting)
 
 // -- або 
 console.log(playlist['tracks']);

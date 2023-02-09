@@ -21,19 +21,19 @@
 записати сумму в змінну  totalSalary і вивисти в консоль
 */
 
-// 1 - зробити вари
+// // 1 - зробити вари
 // const minSalary = 500;
 // const maxSalary = 5000;
 // const employees = 4;
 // let totalSalary = 0;
 // // 2 - перебрати робітників в циклі
 // for (let i = 1; i <= employees; i += 1) {
-// 3 - згенерувати случайну зп
-    // const salary = Math.round(
-        // Math.random() * (maxSalary - minSalary) + minSalary
-    // );
+// // 3 - згенерувати случайну зп
+//     const salary = Math.round(
+//         Math.random() * (maxSalary - minSalary) + minSalary
+//     );
 
-    // console.log(`зп робітника ${i} = ${salary}`);
+//     console.log(`зп робітника ${i} = ${salary}`);
 
 // //     // 4 - добавити до тотала
 //     totalSalary += salary;
@@ -50,9 +50,9 @@
 */
 
 // 1 зробити змінні.
-const min = 5;
-const max = 13;
-let total = 0;
+// const min = 5;
+// const max = 13;
+// let total = 0;
 // ====---------------------------- 1 й варік ------------------=========
 // 2 перебрати числа від min до max
 // for (let i = min; i <= max; i += 1) {
@@ -70,13 +70,13 @@ let total = 0;
 
 // ==========------------------- 2й варік-----------------------=====
 
-for (let i = min; i <= max; i += 1) {
-    if (i % 2 !== 0) {
-        console.log(` Не парне :`, i);
-        continue;
-          }
-        console.log(`парне :`, i);
-        total += i;
+// for (let i = min; i <= max; i += 1) {
+//     if (i % 2 !== 0) {
+//         console.log(` Не парне :`, i);
+//         continue;
+//           }
+//         console.log(`парне :`, i);
+//         total += i;
     
-}
-console.log("total =", total);
+// }
+// console.log("total =", total);
