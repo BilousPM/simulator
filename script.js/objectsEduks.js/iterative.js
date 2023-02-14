@@ -220,34 +220,77 @@
 // мутуючі та не мутуючі методи масиву
 
 
-class StringBuilder{
-constructor(initialValue) {
-  this.value = initialValue
-}
+// class Car1 {
 
-    getValue() {
-        console.log(this.value)
+//     static description = 'Класс, що описує автомобіль';
+
+//     static logInfo(carObj) {
+//         console.log('Car.logInfo => carObj', carObj);
+//     };
+
+//    #test = 'test';
+
+//     constructor({brand, model, price} = {}) {
+
+//         this.brand = brand;
+//         this._model = model;
+//         this._price = price;
+
+//     }
+        
+//     getBrand() {
+//     }
+
+//     getPrice(newPrice) {
+//     }
+
+//     set model(newModel) {
+//         this._model = newModel;
+//     } 
+//     // setPrice(newPrice) {
+//     //     this.price = newPrice;
+//     // }
+
+//     get model() { 
+//          return this._model;
+//     };
+//     // getModel() {
+//     //     
     
-    }
-    
-    padEnd(str) {
-      console.log(str + this.value)
-  }
-  
-  padStart(str) {
-  }
-  
-  padBoth(str){}
-}
+//     get price() {
+//         return this._price;
+//     }
+
+//     set price(newPrise) {
+//         this._price = newPrice
+//     }
+
+// };
 
 
-// Change code above this line
-const builder = new StringBuilder(".");
-builder.getValue('hg')
-console.log(builder.getValue()); // "."
-builder.padStart("551516");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+
+// console.log(Car1)
+// console.dir(Car1);
+
+// const carInstans = new Car1({
+//     brand: 'Audi',
+//     model: 'Q5',
+//     price: 35000,
+// });
+// const carInstans1 = new Car1({
+//     brand: 'Audi',
+//     model: 'Q7',
+//     price: 50000
+// });
+
+// console.log(carInstans.price)
+// carInstans.price = 601111;
+// console.log(carInstans.price)
+
+
+// console.log(carInstans.model)
+
+// carInstans.model = 'BMW';
+// console.log(carInstans.model)
+// console.log(carInstans)
+
