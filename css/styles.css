@@ -1,3 +1,14 @@
 textarea {
   resize: none;
 }
+
+.title {
+  color: aquamarine;
+  background-color: brown;
+}
+
+.title__link {
+  display: flex;
+  margin-right: 30;
+  margin-left: 30;
+}
