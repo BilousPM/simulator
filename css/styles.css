@@ -12,3 +12,11 @@ textarea {
   margin-right: 30;
   margin-left: 30;
 }
+
+.link {
+  display: flex;
+  color: forestgreen;
+  border: 3px solid #2339ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
